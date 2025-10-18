@@ -1,0 +1,4 @@
+# ninja log v5
+19	4592	7824461475789496	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	1584a283ba17d08e
+1	4745	7824461479591022	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	7ca380a245a55d1c
+4751	6824	7824461495016453	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/build/intermediates/cxx/Debug/302l2r61/obj/x86_64/libsecure_comm_native.so	c529583e03beba92
