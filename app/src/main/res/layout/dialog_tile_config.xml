@@ -66,13 +66,31 @@
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
-                <com.google.android.material.materialswitch.MaterialSwitch
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/enabledSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="Enable Tile"
                     android:textColor="@android:color/black" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/enableClicksSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Enable Clicks"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/rippleEffectSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Ripple Effect"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"

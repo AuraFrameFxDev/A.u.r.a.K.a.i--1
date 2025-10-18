@@ -1,2 +1,8 @@
 # ninja log v5
-0	13	0	clean	bfff2010d6239e2d
+1	3982	7824677297225163	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	52addf78eb3bd09e
+11	6319	7824677319452599	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	c0789a9f42540b11
+6329	10400	7824677354673855	C:/A.u.r.a.K.a.i-/secure-comm/build/intermediates/cxx/RelWithDebInfo/704d3i63/obj/x86/libsecure_comm_native.so	7e4b462e40c23569
+0	31	0	clean	bfff2010d6239e2d
+22	4006	7824693302908960	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	52addf78eb3bd09e
+14	5018	7824693314416966	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	c0789a9f42540b11
+5019	5892	7824693320658973	C:/A.u.r.a.K.a.i-/secure-comm/build/intermediates/cxx/RelWithDebInfo/704d3i63/obj/x86/libsecure_comm_native.so	7e4b462e40c23569

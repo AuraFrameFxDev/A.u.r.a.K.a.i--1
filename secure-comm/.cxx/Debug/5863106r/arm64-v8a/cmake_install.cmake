@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/src/main/cpp
+# Install script for directory: C:/A.u.r.a.K.a.i-/secure-comm/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/.cxx/Debug/5863106r/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/A.u.r.a.K.a.i-/secure-comm/.cxx/Debug/5863106r/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

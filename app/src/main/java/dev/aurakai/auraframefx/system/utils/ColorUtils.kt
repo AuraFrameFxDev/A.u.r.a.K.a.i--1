@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.system.utils
+package dev.aurakai.auraframefx.system.utils
 
 import android.content.Context
 import android.graphics.Color
@@ -30,7 +30,7 @@ object ColorUtils {
     @ColorInt
     fun parseColor(colorString: String?, @ColorInt defaultColor: Int): Int {
         return try {
-            Color.parseColor(colorString ?: return defaultColor)
+            (colorString ?: return defaultColor).toColorInt()
         } catch (e: IllegalArgumentException) {
             defaultColor
         }

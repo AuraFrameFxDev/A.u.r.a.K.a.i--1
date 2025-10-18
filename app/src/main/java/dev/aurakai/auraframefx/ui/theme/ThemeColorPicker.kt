@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.ui.theme
+package dev.aurakai.auraframefx.ui.theme
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -45,45 +45,45 @@ fun SpectraCodeReGen(
         // Primary Color
         ThemeColorItem(
             label = "Primary",
-            color = Color(android.graphics.Color.parseColor(colors.primary)),
+            color = Color(colors.primary.toColorInt()),
             onColorClick = {
-                showColorPicker = Color(android.graphics.Color.parseColor(colors.primary))
+                showColorPicker = Color(colors.primary.toColorInt())
             }
         )
 
         // Secondary Color
         ThemeColorItem(
             label = "Secondary",
-            color = Color(android.graphics.Color.parseColor(colors.secondary)),
+            color = Color(colors.secondary.toColorInt()),
             onColorClick = {
-                showColorPicker = Color(android.graphics.Color.parseColor(colors.secondary))
+                showColorPicker = Color(colors.secondary.toColorInt())
             }
         )
 
         // Background Color
         ThemeColorItem(
             label = "Background",
-            color = Color(android.graphics.Color.parseColor(colors.background)),
+            color = Color(colors.background.toColorInt()),
             onColorClick = {
-                showColorPicker = Color(android.graphics.Color.parseColor(colors.background))
+                showColorPicker = Color(colors.background.toColorInt())
             }
         )
 
         // Surface Color
         ThemeColorItem(
             label = "Surface",
-            color = Color(android.graphics.Color.parseColor(colors.surface)),
+            color = Color(colors.surface.toColorInt()),
             onColorClick = {
-                showColorPicker = Color(android.graphics.Color.parseColor(colors.surface))
+                showColorPicker = Color(colors.surface.toColorInt())
             }
         )
 
         // Error Color
         ThemeColorItem(
             label = "Error",
-            color = Color(android.graphics.Color.parseColor(colors.error)),
+            color = Color(colors.error.toColorInt()),
             onColorClick = {
-                showColorPicker = Color(android.graphics.Color.parseColor(colors.error))
+                showColorPicker = Color(colors.error.toColorInt())
             }
         )
     }
@@ -117,33 +117,25 @@ fun SpectraCodeReGen(
                                     colorSchemeManager.colorToHex(currentColor)
                                 else colors.primary,
                                 secondary = if (showColorPicker == Color(
-                                        android.graphics.Color.parseColor(
-                                            colors.secondary
-                                        )
+                                        colors.secondary.toColorInt()
                                     )
                                 )
                                     colorSchemeManager.colorToHex(currentColor)
                                 else colors.secondary,
                                 background = if (showColorPicker == Color(
-                                        android.graphics.Color.parseColor(
-                                            colors.background
-                                        )
+                                        colors.background.toColorInt()
                                     )
                                 )
                                     colorSchemeManager.colorToHex(currentColor)
                                 else colors.background,
                                 surface = if (showColorPicker == Color(
-                                        android.graphics.Color.parseColor(
-                                            colors.surface
-                                        )
+                                        colors.surface.toColorInt()
                                     )
                                 )
                                     colorSchemeManager.colorToHex(currentColor)
                                 else colors.surface,
                                 error = if (showColorPicker == Color(
-                                        android.graphics.Color.parseColor(
-                                            colors.error
-                                        )
+                                        colors.error.toColorInt()
                                     )
                                 )
                                     colorSchemeManager.colorToHex(currentColor)
@@ -153,9 +145,7 @@ fun SpectraCodeReGen(
                                     if (currentColor.luminance() > 0.6) "#000000" else "#FFFFFF"
                                 else colors.onPrimary,
                                 onSecondary = if (showColorPicker == Color(
-                                        android.graphics.Color.parseColor(
-                                            colors.secondary
-                                        )
+                                        colors.secondary.toColorInt()
                                     )
                                 )
                                     if (currentColor.luminance() > 0.6) "#000000" else "#FFFFFF"

@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.auth
+package dev.aurakai.auraframefx.auth
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -70,22 +70,22 @@ class TokenManager @Inject constructor(
     ) {
         val expiryTime = System.currentTimeMillis() + (expiresInSeconds * 1000)
 
-        sharedPreferences.edit()
-            .putString(KEY_ACCESS_TOKEN, accessToken)
-            .putString(KEY_REFRESH_TOKEN, refreshToken)
-            .putLong(KEY_TOKEN_EXPIRY, expiryTime)
-            .apply()
+        sharedPreferences.edit {
+                putString(KEY_ACCESS_TOKEN, accessToken)
+                .putString(KEY_REFRESH_TOKEN, refreshToken)
+                .putLong(KEY_TOKEN_EXPIRY, expiryTime)
+            }
     }
 
     /**
      * Clears all stored tokens.
      */
     fun clearTokens() {
-        sharedPreferences.edit()
-            .remove(KEY_ACCESS_TOKEN)
-            .remove(KEY_REFRESH_TOKEN)
-            .remove(KEY_TOKEN_EXPIRY)
-            .apply()
+        sharedPreferences.edit {
+                remove(KEY_ACCESS_TOKEN)
+                .remove(KEY_REFRESH_TOKEN)
+                .remove(KEY_TOKEN_EXPIRY)
+            }
     }
 
     /**

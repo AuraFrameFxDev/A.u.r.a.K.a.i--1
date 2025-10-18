@@ -1,8 +1,7 @@
-﻿package dev.aurakai.auraframefx.ui.settings
+package dev.aurakai.auraframefx.ui.settings
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -138,7 +137,7 @@ class QuickSettingsConfigActivity : androidx.appcompat.app.AppCompatActivity() {
         tile.background?.let { background ->
             when (background) {
                 is QuickSettingsConfig.QuickSettingsBackground.Solid -> {
-                    card.setCardBackgroundColor(Color.parseColor(background.color))
+                    card.setCardBackgroundColor(background.color.toColorInt())
                     card.alpha = background.alpha
                 }
                 // Handle other background types as needed

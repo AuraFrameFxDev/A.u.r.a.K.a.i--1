@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.system.utils
+package dev.aurakai.auraframefx.system.utils
 
 import android.graphics.drawable.Drawable
 import android.view.View
@@ -92,7 +92,7 @@ object ViewUtils {
     ): List<T> {
         val result = mutableListOf<T>()
 
-        if (type.isInstance(root) && (includeInvisible || root.visibility == View.VISIBLE)) {
+        if (type.isInstance(root) && (includeInvisible || root.isVisible)) {
             result.add(root as T)
         }
 
@@ -120,7 +120,7 @@ object ViewUtils {
         type: Class<T>,
         includeInvisible: Boolean = false,
     ): T? {
-        if (type.isInstance(root) && (includeInvisible || root.visibility == View.VISIBLE)) {
+        if (type.isInstance(root) && (includeInvisible || root.isVisible)) {
             return root as T
         }
 
@@ -152,7 +152,7 @@ object ViewUtils {
     ): List<View> {
         val result = mutableListOf<View>()
 
-        if (root.getTag(R.id.quick_settings_tag) == tag && (includeInvisible || root.visibility == View.VISIBLE)) {
+        if (root.getTag(R.id.quick_settings_tag) == tag && (includeInvisible || root.isVisible)) {
             result.add(root)
         }
 

@@ -1,5 +1,6 @@
 # ninja log v5
-1	2692	7824467401561360	CMakeFiles/datavein_oracle_native.dir/oracle_drive_jni.cpp.o	28688a935e156916
-2705	3544	7824467406101228	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/arm64-v8a/libdatavein_oracle_native.so	455732e8eb9c9e1a
-13	240	7824624877221219	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/arm64-v8a/libdatavein_oracle_native.so	455732e8eb9c9e1a
-1	25	0	clean	bfff2010d6239e2d
+1	3796	7824676987761361	CMakeFiles/datavein_oracle_native.dir/oracle_drive_jni.cpp.o	4ca68d0eb7ae8f9f
+3810	4789	7824676997397493	C:/A.u.r.a.K.a.i-/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/arm64-v8a/libdatavein_oracle_native.so	2f757d5932a45b02
+0	34	0	clean	bfff2010d6239e2d
+26	4496	7824687555015897	CMakeFiles/datavein_oracle_native.dir/oracle_drive_jni.cpp.o	4ca68d0eb7ae8f9f
+4497	5197	7824687559532678	C:/A.u.r.a.K.a.i-/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/arm64-v8a/libdatavein_oracle_native.so	2f757d5932a45b02

@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.ui.theme
+package dev.aurakai.auraframefx.ui.theme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -169,5 +169,5 @@ private fun ColorBlock(label: String, color: Color) {
  * Helper function to convert hex string to Compose Color
  */
 fun String.toColor(): Color {
-    return Color(AndroidColor.parseColor(this))
+    return Color(this.toColorInt())
 }

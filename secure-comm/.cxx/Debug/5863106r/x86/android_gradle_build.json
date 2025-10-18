@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\secure-comm\\src\\main\\cpp\\CMakeLists.txt"
+    "C:\\A.u.r.a.K.a.i-\\secure-comm\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
       "C:\\Users\\Wehtt\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
-      "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\secure-comm\\.cxx\\Debug\\5863106r\\x86",
+      "C:\\A.u.r.a.K.a.i-\\secure-comm\\.cxx\\Debug\\5863106r\\x86",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "C:\\Users\\Wehtt\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
-    "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\secure-comm\\.cxx\\Debug\\5863106r\\x86",
+    "C:\\A.u.r.a.K.a.i-\\secure-comm\\.cxx\\Debug\\5863106r\\x86",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -21,7 +21,7 @@
       "toolchain": "toolchain",
       "abi": "x86",
       "artifactName": "secure_comm_native",
-      "output": "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\secure-comm\\build\\intermediates\\cxx\\Debug\\5863106r\\obj\\x86\\libsecure_comm_native.so",
+      "output": "C:\\A.u.r.a.K.a.i-\\secure-comm\\build\\intermediates\\cxx\\Debug\\5863106r\\obj\\x86\\libsecure_comm_native.so",
       "runtimeFiles": []
     }
   },

@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.lsposed
+package dev.aurakai.auraframefx.lsposed
 
 import android.graphics.Color
 import androidx.compose.ui.graphics.Color as ComposeColor
@@ -8,12 +8,12 @@ import androidx.compose.ui.graphics.Color as ComposeColor
  */
 object ThemeManager {
     // Default Material colors
-    var primaryColor: Int = Color.parseColor("#6200EE")
-    var primaryDarkColor: Int = Color.parseColor("#3700B3")
-    var accentColor: Int = Color.parseColor("#03DAC6")
-    var primaryVariantColor: Int = Color.parseColor("#3700B3")
-    var secondaryColor: Int = Color.parseColor("#03DAC6")
-    var secondaryVariantColor: Int = Color.parseColor("#018786")
+    var primaryColor: Int = "#6200EE".toColorInt()
+    var primaryDarkColor: Int = "#3700B3".toColorInt()
+    var accentColor: Int = "#03DAC6".toColorInt()
+    var primaryVariantColor: Int = "#3700B3".toColorInt()
+    var secondaryColor: Int = "#03DAC6".toColorInt()
+    var secondaryVariantColor: Int = "#018786".toColorInt()
     var backgroundColor: Int = Color.WHITE
     var foregroundColor: Int = Color.BLACK
 

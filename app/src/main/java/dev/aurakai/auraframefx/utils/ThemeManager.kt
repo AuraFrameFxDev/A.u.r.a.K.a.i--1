@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.utils
+package dev.aurakai.auraframefx.utils
 
 import android.app.Activity
 import android.content.Context
@@ -95,14 +95,10 @@ class ThemeManager @Inject constructor(
         val colors = getThemeColors(darkTheme)
 
         // Set status bar color
-        window.statusBarColor = android.graphics.Color.parseColor(
-            if (darkTheme) colors.background else colors.surface
-        )
+        window.statusBarColor = if (darkTheme) colors.background else colors.surface.toColorInt()
 
         // Set navigation bar color
-        window.navigationBarColor = android.graphics.Color.parseColor(
-            if (darkTheme) colors.background else colors.surface
-        )
+        window.navigationBarColor = if (darkTheme) colors.background else colors.surface.toColorInt()
 
         // Set system UI appearance
         when {

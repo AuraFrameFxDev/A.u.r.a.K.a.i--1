@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.system.lockscreen
+package dev.aurakai.auraframefx.system.lockscreen
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -269,12 +269,12 @@ class LockScreenCustomizer @Inject constructor(
         try {
             // Save to SharedPreferences
             // This would serialize the config to JSON or structured keys
-            prefs.edit()
-                .putBoolean("genesis_elements", config.showGenesisElements)
-                .putString("clock_position", config.clockConfig.position)
-                .putBoolean("haptic_enabled", config.hapticFeedback.enabled)
-                .putString("animation_type", config.animation.type)
-                .apply()
+            prefs.edit {
+                    putBoolean("genesis_elements", config.showGenesisElements)
+                    .putString("clock_position", config.clockConfig.position)
+                    .putBoolean("haptic_enabled", config.hapticFeedback.enabled)
+                    .putString("animation_type", config.animation.type)
+                }
 
         } catch (e: Exception) {
             logger.error("LockScreenCustomizer", "Failed to save configuration", e)

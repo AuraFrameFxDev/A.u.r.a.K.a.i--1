@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/src/main/cpp
+# Install script for directory: C:/A.u.r.a.K.a.i-/datavein-oracle-native/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/.cxx/Debug/2w5s1c4q/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/A.u.r.a.K.a.i-/datavein-oracle-native/.cxx/Debug/2w5s1c4q/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

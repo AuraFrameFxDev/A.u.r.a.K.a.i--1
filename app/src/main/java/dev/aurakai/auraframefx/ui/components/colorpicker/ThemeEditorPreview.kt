@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.ui.components.colorpicker
+package dev.aurakai.auraframefx.ui.components.colorpicker
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -56,5 +56,5 @@ fun Int.toColor(): Color {
  */
 @Composable
 fun String.toColor(): Color {
-    return Color(AndroidColor.parseColor(this))
+    return Color(this.toColorInt())
 }

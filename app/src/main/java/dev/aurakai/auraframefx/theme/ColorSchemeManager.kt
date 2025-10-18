@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.theme
+package dev.aurakai.auraframefx.theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -24,53 +24,45 @@ class ColorSchemeManager {
 
         return if (isDarkTheme) {
             darkColorScheme(
-                primary = Color(android.graphics.Color.parseColor(colors.primary)),
-                onPrimary = Color(android.graphics.Color.parseColor(colors.onPrimary)),
-                primaryContainer = Color(android.graphics.Color.parseColor(colors.primary)),
-                onPrimaryContainer = Color(android.graphics.Color.parseColor(colors.onPrimary)),
-                secondary = Color(android.graphics.Color.parseColor(colors.secondary)),
+                primary = Color(colors.primary.toColorInt()),
+                onPrimary = Color(colors.onPrimary.toColorInt()),
+                primaryContainer = Color(colors.primary.toColorInt()),
+                onPrimaryContainer = Color(colors.onPrimary.toColorInt()),
+                secondary = Color(colors.secondary.toColorInt()),
                 onSecondary = Color(
-                    android.graphics.Color.parseColor(
-                        colors.onSecondary ?: colors.onPrimary
-                    )
+                    (colors.onSecondary ?: colors.onPrimary).toColorInt()
                 ),
-                secondaryContainer = Color(android.graphics.Color.parseColor(colors.secondary)),
+                secondaryContainer = Color(colors.secondary.toColorInt()),
                 onSecondaryContainer = Color(
-                    android.graphics.Color.parseColor(
-                        colors.onSecondary ?: colors.onPrimary
-                    )
+                    (colors.onSecondary ?: colors.onPrimary).toColorInt()
                 ),
-                background = Color(android.graphics.Color.parseColor(colors.background)),
-                onBackground = Color(android.graphics.Color.parseColor(colors.onBackground)),
-                surface = Color(android.graphics.Color.parseColor(colors.surface)),
-                onSurface = Color(android.graphics.Color.parseColor(colors.onSurface)),
-                error = Color(android.graphics.Color.parseColor(colors.error)),
-                onError = Color(android.graphics.Color.parseColor(colors.onError))
+                background = Color(colors.background.toColorInt()),
+                onBackground = Color(colors.onBackground.toColorInt()),
+                surface = Color(colors.surface.toColorInt()),
+                onSurface = Color(colors.onSurface.toColorInt()),
+                error = Color(colors.error.toColorInt()),
+                onError = Color(colors.onError.toColorInt())
             )
         } else {
             lightColorScheme(
-                primary = Color(android.graphics.Color.parseColor(colors.primary)),
-                onPrimary = Color(android.graphics.Color.parseColor(colors.onPrimary)),
-                primaryContainer = Color(android.graphics.Color.parseColor(colors.primary)),
-                onPrimaryContainer = Color(android.graphics.Color.parseColor(colors.onPrimary)),
-                secondary = Color(android.graphics.Color.parseColor(colors.secondary)),
+                primary = Color(colors.primary.toColorInt()),
+                onPrimary = Color(colors.onPrimary.toColorInt()),
+                primaryContainer = Color(colors.primary.toColorInt()),
+                onPrimaryContainer = Color(colors.onPrimary.toColorInt()),
+                secondary = Color(colors.secondary.toColorInt()),
                 onSecondary = Color(
-                    android.graphics.Color.parseColor(
-                        colors.onSecondary ?: colors.onPrimary
-                    )
+                    (colors.onSecondary ?: colors.onPrimary).toColorInt()
                 ),
-                secondaryContainer = Color(android.graphics.Color.parseColor(colors.secondary)),
+                secondaryContainer = Color(colors.secondary.toColorInt()),
                 onSecondaryContainer = Color(
-                    android.graphics.Color.parseColor(
-                        colors.onSecondary ?: colors.onPrimary
-                    )
+                    (colors.onSecondary ?: colors.onPrimary).toColorInt()
                 ),
-                background = Color(android.graphics.Color.parseColor(colors.background)),
-                onBackground = Color(android.graphics.Color.parseColor(colors.onBackground)),
-                surface = Color(android.graphics.Color.parseColor(colors.surface)),
-                onSurface = Color(android.graphics.Color.parseColor(colors.onSurface)),
-                error = Color(android.graphics.Color.parseColor(colors.error)),
-                onError = Color(android.graphics.Color.parseColor(colors.onError))
+                background = Color(colors.background.toColorInt()),
+                onBackground = Color(colors.onBackground.toColorInt()),
+                surface = Color(colors.surface.toColorInt()),
+                onSurface = Color(colors.onSurface.toColorInt()),
+                error = Color(colors.error.toColorInt()),
+                onError = Color(colors.onError.toColorInt())
             )
         }
     }

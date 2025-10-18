@@ -1,4 +1,4 @@
-﻿package dev.aurakai.auraframefx.system.utils
+package dev.aurakai.auraframefx.system.utils
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -44,7 +44,7 @@ object AnimationUtils {
         startDelay: Long = 0,
         onEnd: (() -> Unit)? = null,
     ) {
-        if (view.visibility == View.VISIBLE && view.alpha == 1f) {
+        if (view.isVisible && view.alpha == 1f) {
             onEnd?.invoke()
             return
         }
@@ -112,7 +112,7 @@ object AnimationUtils {
         duration: Long = REVEAL_DURATION,
         onEnd: (() -> Unit)? = null,
     ) {
-        if (view.visibility == View.VISIBLE) {
+        if (view.isVisible) {
             onEnd?.invoke()
             return
         }
@@ -208,7 +208,7 @@ object AnimationUtils {
         animator.duration = duration
         animator.addUpdateListener { animator ->
             val color = animator.animatedValue as Int
-            view.background = ColorDrawable(color)
+            view.background = color.toDrawable()
         }
         animator.addListener(
             onEnd = { onEnd?.invoke() }

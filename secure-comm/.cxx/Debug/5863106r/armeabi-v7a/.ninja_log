@@ -1,6 +1,8 @@
 # ninja log v5
-1	2349	7824467423114888	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	956accb20db16355
-9	3271	7824467432310358	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	19ab3e123fd572a8
-3276	3517	7824467434737646	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/build/intermediates/cxx/Debug/5863106r/obj/armeabi-v7a/libsecure_comm_native.so	1b73ba6568159691
-13	257	7824624877463686	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/build/intermediates/cxx/Debug/5863106r/obj/armeabi-v7a/libsecure_comm_native.so	1b73ba6568159691
-0	18	0	clean	bfff2010d6239e2d
+0	6809	7824677101184855	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	bbaf426cdd55b256
+13	10143	7824677135302255	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	8ae5f29e1ebb9434
+10148	11554	7824677147247018	C:/A.u.r.a.K.a.i-/secure-comm/build/intermediates/cxx/Debug/5863106r/obj/armeabi-v7a/libsecure_comm_native.so	e692ff57d3ea32b9
+0	222	0	clean	bfff2010d6239e2d
+41	4188	7824687551932701	CMakeFiles/secure_comm_native.dir/secure_comm_jni.cpp.o	bbaf426cdd55b256
+20	5507	7824687565243942	CMakeFiles/secure_comm_native.dir/crypto_engine.cpp.o	8ae5f29e1ebb9434
+5508	5933	7824687568936948	C:/A.u.r.a.K.a.i-/secure-comm/build/intermediates/cxx/Debug/5863106r/obj/armeabi-v7a/libsecure_comm_native.so	e692ff57d3ea32b9

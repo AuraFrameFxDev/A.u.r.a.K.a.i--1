@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\datavein-oracle-native\\src\\main\\cpp\\CMakeLists.txt"
+    "C:\\A.u.r.a.K.a.i-\\datavein-oracle-native\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
       "C:\\Users\\Wehtt\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
-      "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\datavein-oracle-native\\.cxx\\Debug\\2w5s1c4q\\arm64-v8a",
+      "C:\\A.u.r.a.K.a.i-\\datavein-oracle-native\\.cxx\\Debug\\2w5s1c4q\\arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "C:\\Users\\Wehtt\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
-    "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\datavein-oracle-native\\.cxx\\Debug\\2w5s1c4q\\arm64-v8a",
+    "C:\\A.u.r.a.K.a.i-\\datavein-oracle-native\\.cxx\\Debug\\2w5s1c4q\\arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -21,7 +21,7 @@
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "datavein_oracle_native",
-      "output": "C:\\Users\\Wehtt\\AndroidStudioProjects\\AuraKai_ReIntelligence\\datavein-oracle-native\\build\\intermediates\\cxx\\Debug\\2w5s1c4q\\obj\\arm64-v8a\\libdatavein_oracle_native.so",
+      "output": "C:\\A.u.r.a.K.a.i-\\datavein-oracle-native\\build\\intermediates\\cxx\\Debug\\2w5s1c4q\\obj\\arm64-v8a\\libdatavein_oracle_native.so",
       "runtimeFiles": []
     }
   },
