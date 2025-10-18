@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.0.0-alpha10" type="incidents">
+
+    <incident
+        id="SdCardPath"
+        severity="warning"
+        message="Do not hardcode &quot;/sdcard/&quot;; use `Environment.getExternalStorageDirectory().getPath()` instead">
+        <location
+            file="${:romtools*debug*MAIN*sourceProvider*0*javaDir*2}/dev/aurakai/auraframefx/romtools/ui/RomToolsScreen.kt"
+            line="241"
+            column="25"
+            startOffset="9010"
+            endLine="241"
+            endColumn="40"
+            endOffset="9025"/>
+    </incident>
+
+</incidents>

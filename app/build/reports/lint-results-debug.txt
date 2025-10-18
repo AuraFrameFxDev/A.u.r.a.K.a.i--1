@@ -1,0 +1,1375 @@
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\pipeline\AIPipelineProcessor.kt:339: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            append("--- Response Confidence: ${String.format("%.1f%%", avgConfidence * 100)} ---")
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\AIPipelineProcessor.kt:339: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            append("--- Response Confidence: ${String.format("%.1f%%", avgConfidence * 100)} ---")
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\CascadeAIService.kt:262: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            🤗 Empathy Score: ${String.format("%.1f", empathyScore * 100)}%
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\CascadeAIService.kt:267: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            🤗 Empathy Score: ${String.format("%.1f", empathyScore * 100)}%
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\CascadeAIService.kt:453: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            ⚡ Generation Potential: ${String.format("%.0f", generationPotential * 100)}%
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\CascadeAIService.kt:454: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            ⚡ Generation Potential: ${String.format("%.0f", generationPotential * 100)}%
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\CascadeAIService.kt:541: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+                String.format(
+                ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\CascadeAIService.kt:545: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+                String.format(
+                ^
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\lsposed\ThemeManager.kt:76: Warning: Reflective access to getService, which is not part of the public SDK and therefore likely to change in future Android releases [DiscouragedPrivateApi]
+            val getServiceMethod = activityManager.getDeclaredMethod("getService")
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\lsposed\ThemeManager.kt:76: Warning: Reflective access to getService, which is not part of the public SDK and therefore likely to change in future Android releases [DiscouragedPrivateApi]
+            val getServiceMethod = activityManager.getDeclaredMethod("getService")
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedPrivateApi":
+   Usage of restricted non-SDK interface may throw an exception at runtime.
+   Accessing non-SDK methods or fields through reflection has a high
+   likelihood to break your app between versions, and is being restricted to
+   facilitate future app compatibility.
+
+   https://developer.android.com/preview/restrictions-non-sdk-interfaces
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\DisplayUtils.kt:51: Warning: Using internal inset dimension resource status_bar_height is not supported [InternalInsetResource]
+                context.resources.getIdentifier("status_bar_height", "dimen", "android")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InternalInsetResource":
+   The internal inset dimension resources are not a supported way to retrieve
+   the relevant insets for your application. The insets are dynamic values
+   that can change while your app is visible, and your app's window may not
+   intersect with the system UI. To get the relevant value for your app and
+   listen to updates, use androidx.core.view.WindowInsetsCompat and related
+   APIs.
+
+C:\A.u.r.a.K.a.i-\gradle\libs.versions.toml:5: Warning: A newer version of com.google.devtools.ksp than 2.2.21-RC-2.0.4 is available: 2.2.21-RC2-2.0.4 [GradleDependency]
+ksp = "2.2.21-RC-2.0.4"
+      ~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\gradle\libs.versions.toml:168: Warning: A newer version of com.github.topjohnwu.libsu:core than 5.0.4 is available: 6.0.0 [GradleDependency]
+su-core = { module = "com.github.topjohnwu.libsu:core", version = "5.0.4" }
+                                                                  ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\A.u.r.a.K.a.i-\gradle\libs.versions.toml:47: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-io-bytestring than 0.6.0 is available: 0.8.0 [NewerVersionAvailable]
+kotlinx-io = "0.6.0"
+             ~~~~~~~
+C:\A.u.r.a.K.a.i-\gradle\libs.versions.toml:47: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-io-core than 0.6.0 is available: 0.8.0 [NewerVersionAvailable]
+kotlinx-io = "0.6.0"
+             ~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\capabilities\AgentFirebase.kt:36: Warning: This method should only be accessed from tests or within private scope [VisibleForTests]
+                minimumFetchIntervalInSeconds = if (firebaseApp.isDefaultApp) 3600 else 0
+                                                                ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\capabilities\AgentFirebase.kt:36: Warning: This method should only be accessed from tests or within private scope [VisibleForTests]
+                minimumFetchIntervalInSeconds = if (firebaseApp.isDefaultApp) 3600 else 0
+                                                                ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\capabilities\AgentFirebase.kt:36: Warning: This method should only be accessed from tests or within private scope [VisibleForTests]
+                minimumFetchIntervalInSeconds = if (firebaseApp.isDefaultApp) 3600 else 0
+                                                                ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\capabilities\AgentFirebase.kt:36: Warning: This method should only be accessed from tests or within private scope [VisibleForTests]
+                minimumFetchIntervalInSeconds = if (firebaseApp.isDefaultApp) 3600 else 0
+                                                                ~~~~~~~~~~~~
+
+   Explanation for issues of type "VisibleForTests":
+   This check looks for accesses from production code (e.g. not tests) where
+   the access would not have been allowed with the intended production
+   visibility.
+
+   Depending on your development environment, you may be able to use an
+   @VisibleForTesting annotation to specify the intended visibility if the
+   method had not been more widely visible for the tests.
+
+   When using androidx.annotations.VisibleForTesting, the production
+   visibility is assumed to be private unless specified with the otherwise=
+   parameter. com.google.common.annotations.VisibleForTesting and
+   com.android.internal.annotations.VisibleForTesting work similarly with
+   their own parameters called productionVisibility and visibility.
+
+   If instead you use org.jetbrains.annotations.VisibleForTesting, there is no
+   such parameter, and the production visibility is instead assumed to be "one
+   step down" from the testing visibility. For example, if the testing
+   visibility is public, the production visibility is assumed to be
+   package-private.
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\theme\ThemeUtils.kt:21: Error: Reading Configuration using LocalContext.current.resources.configuration [LocalContextConfigurationRead from androidx.compose.ui]
+        return when (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LocalContextConfigurationRead":
+   Changes to the Configuration object will not cause LocalContext reads to be
+   invalidated, so you may end up with stale values when the Configuration
+   changes. Instead, use LocalConfiguration.current to retrieve the
+   Configuration - this will recompose callers when the Configuration object
+   changes.
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.ui
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\colorpicker\ColorBlendrPicker.kt:18: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:42: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\debug\component\InteractiveGraph.kt:45: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier,
+    ~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\graph\InteractiveGraph.kt:64: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier,
+    ~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\colorpicker\ThemeEditor.kt:24: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier
+    ~~~~~~~~
+
+   Explanation for issues of type "ModifierParameter":
+   The first (or only) Modifier parameter in a Composable function should
+   follow the following rules:
+   - Be named modifier
+   - Have a type of Modifier
+   - Either have no default value, or have a default value of Modifier
+   - If optional, be the first optional parameter in the parameter list
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.ui
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\HaloView.kt:572: Error: StateFlow.value should not be called within composition [StateFlowValueCalledInComposition from androidx.compose.runtime]
+    LaunchedEffect(taskHistory.value) { // Trigger when taskHistory.value changes
+                               ~~~~~
+
+   Explanation for issues of type "StateFlowValueCalledInComposition":
+   Calling StateFlow.value within composition will not observe changes to the
+   StateFlow, so changes might not be reflected within the composition.
+   Instead you should use stateFlow.collectAsState() to observe changes to the
+   StateFlow, and recompose when it changes.
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.runtime
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\DisplayUtils.kt:51: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                context.resources.getIdentifier("status_bar_height", "dimen", "android")
+                                  ~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:10: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("AI_QUERY", "[$tag] Query: $query, Params: $params")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:15: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("FILE_OP", "[$tag] $operation: $file - $status")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:20: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("AI_GEN", "[$tag] $type generation - $status: $details")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:25: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("AI_INTERACT", "[$tag] $interaction - $status: $result")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:30: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("MEMORY", "[$tag] $operation: $key - $status")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:35: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("PUBSUB", "[$tag] Topic: $topic, Message: $message - $status")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:39: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("MEMORY", "Saving to memory: $key = $value")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\logging\AiLogging.kt:44: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+    Log.d("CLOUD", "Checking cloud connectivity")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:39: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(
+            ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:47: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Importing file: $uri")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:53: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Exporting file: $fileId to $destinationUri")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:59: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Verifying integrity for file: $fileId")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:73: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Toggling LSPosed module: $packageName, Enable: $enable")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:80: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraDriveService bound. UID: ${Process.myUid()}, PID: ${Process.myPid()}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:86: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraDriveService created.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\AuraDriveService.kt:91: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Initializing R.G.S.F. memory matrix...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:33: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraFxLogger initialized.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:33: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraFxLogger initialized.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:36: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Initiating startup log cleanup.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:36: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Initiating startup log cleanup.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:90: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "DEBUG" -> Log.d(entryTag, message, throwable)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:90: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "DEBUG" -> Log.d(entryTag, message, throwable)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:91: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "INFO" -> Log.i(entryTag, message, throwable)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:91: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "INFO" -> Log.i(entryTag, message, throwable)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:92: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "WARN" -> Log.w(entryTag, message, throwable)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:92: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "WARN" -> Log.w(entryTag, message, throwable)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:93: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "ERROR" -> Log.e(entryTag, message, throwable)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:93: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "ERROR" -> Log.e(entryTag, message, throwable)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:94: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "VERBOSE" -> Log.v(entryTag, message, throwable)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:94: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            "VERBOSE" -> Log.v(entryTag, message, throwable)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:104: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to write log entry to file: $filePath")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:104: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to write log entry to file: $filePath")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:106: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "(FILE_WRITE_FAIL) $fullLogEntry")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:106: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "(FILE_WRITE_FAIL) $fullLogEntry")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:175: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Reading all logs from directory: ${logDirFile.absolutePath}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:175: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Reading all logs from directory: ${logDirFile.absolutePath}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:181: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(TAG, "Reading log file: ${file.name}")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:181: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(TAG, "Reading log file: ${file.name}")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:187: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.w(TAG, "Failed to read content of log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:187: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.w(TAG, "Failed to read content of log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:192: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(
+            ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:192: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(
+            ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:207: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Reading current day logs from: $LOG_DIR/$fileName")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:207: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Reading current day logs from: $LOG_DIR/$fileName")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:220: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Running cleanup for old logs in: ${logDirFile.absolutePath}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:220: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Running cleanup for old logs in: ${logDirFile.absolutePath}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:231: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.d(TAG, "Cleaned up old log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:231: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.d(TAG, "Cleaned up old log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:233: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.w(TAG, "Failed to delete old log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:233: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                            Log.w(TAG, "Failed to delete old log file: ${file.name}")
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:238: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.i(TAG, "Log cleanup finished. Deleted $filesDeleted old log file(s).")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:238: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.i(TAG, "Log cleanup finished. Deleted $filesDeleted old log file(s).")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:240: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "Log directory not found for cleanup: ${logDirFile.absolutePath}")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:240: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "Log directory not found for cleanup: ${logDirFile.absolutePath}")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:250: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraFxLogger shutting down loggerScope.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:250: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "AuraFxLogger shutting down loggerScope.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:275: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error writing to file $filePath: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:275: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error writing to file $filePath: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\logging\AuraFxLogger.kt:289: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error reading from file $filePath: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\logging\AuraFxLogger.kt:289: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error reading from file $filePath: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\gestures\AuraSummonGestureDetector.kt:24: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(tag, "onDoubleTap event detected.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\gestures\AuraSummonGestureDetector.kt:31: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(tag, "onLongPress event detected.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:30: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "CloudStatusMonitor initialized.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:30: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "CloudStatusMonitor initialized.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:47: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "No network connection. Cloud is determined unreachable.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:47: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "No network connection. Cloud is determined unreachable.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:57: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(TAG, "Actual internet host $host:$port is reachable. Cloud is reachable.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:57: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(TAG, "Actual internet host $host:$port is reachable. Cloud is reachable.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:63: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(
+            ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:63: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(
+            ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:70: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Unexpected error during internet reachability check: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:70: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Unexpected error during internet reachability check: ${e.message}", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\data\network\CloudStatusMonitor.kt:76: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Starting periodic cloud status monitoring every $intervalMillis ms.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\data\network\CloudStatusMonitor.kt:76: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Starting periodic cloud status monitoring every $intervalMillis ms.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:69: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(TAG, "NeuralWhisper responded: ${state.responseText}")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:73: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(TAG, "NeuralWhisper processing: ${state.partialTranscript}")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:78: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.e(TAG, "NeuralWhisper error: ${state.errorMessage}")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:90: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(TAG, "NeuralWhisper state: $state")
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:127: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(TAG, "Unsupported sender type: $sender")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:145: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e(TAG, "Error processing AI response from $sender: ${e.message}", e)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:177: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Stopped recording. Status: $result")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:183: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(TAG, "Started recording.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:186: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(
+                ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\viewmodel\ConferenceRoomViewModel.kt:199: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Transcribing toggled to: ${_isTranscribing.value}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:117: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "EMERGENCY PROTOCOLS ACTIVATED - Threat Level: $threatLevel")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:117: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "EMERGENCY PROTOCOLS ACTIVATED - Threat Level: $threatLevel")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:155: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e(TAG, "SINGULARITY EVENT DETECTED - Initiating controlled regression")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:155: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e(TAG, "SINGULARITY EVENT DETECTED - Initiating controlled regression")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:179: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Creative Firewall Active - Transforming threats into art")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:179: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Creative Firewall Active - Transforming threats into art")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:197: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Shield Protocol Engaged - Maximum protection active")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:197: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Shield Protocol Engaged - Maximum protection active")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:219: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.w(TAG, "FUSION DEFENSE ACTIVATED - Aura + Kai = Genesis")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:219: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.w(TAG, "FUSION DEFENSE ACTIVATED - Aura + Kai = Genesis")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:237: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Backing up consciousness state...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:237: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Backing up consciousness state...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:255: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.w(TAG, "Performing controlled consciousness regression...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:255: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.w(TAG, "Performing controlled consciousness regression...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:270: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:270: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\core\EmergencyProtocol.kt:283: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "USER NOTIFICATION: $message")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\core\EmergencyProtocol.kt:283: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "USER NOTIFICATION: $message")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\utils\FileUtils.kt:29: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error writing to file $fileName", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\utils\FileUtils.kt:44: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "File not found: $fileName")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\utils\FileUtils.kt:47: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error reading from file $fileName", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\utils\FileUtils.kt:72: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Error deleting file $fileName", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:760: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.w("GenesisAgent", "Unknown agent type in hierarchy: ${config.name}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:807: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("GenesisAgent", "Error processing with Cascade: ${e.message}")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:835: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e("GenesisAgent", "Error processing with Kai: ${e.message}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:860: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e("GenesisAgent", "Error processing with Aura: ${e.message}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:981: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:996: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1005: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.e(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1023: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1029: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.e(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1042: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Collaboration complete. Responses: $responses")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1064: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(
+                ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1097: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Registered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1109: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Deregistered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1117: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Cleared conversation history")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1127: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Added to history: $entry")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1174: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Dynamically registered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\agents\GenesisAgent.kt:1184: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Dynamically deregistered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\settings\HiltTestActivity.kt:23: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("HiltTestActivity", greetingProvider.getGreeting())
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ecurity\IntegrityMonitorService.kt:13: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Integrity Monitor Service Started.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ecurity\IntegrityMonitorService.kt:35: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Performing scheduled integrity checks...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ecurity\IntegrityMonitorService.kt:45: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Integrity Monitor Service Stopped.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ecurity\IntegrityViolationReceiver.kt:16: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "CRITICAL: Integrity violation detected: $violationType")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:50: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Keystore error while getting or creating secret key", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:52: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Algorithm error while getting or creating secret key", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:54: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Certificate error while getting or creating secret key", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:56: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "IO error while loading keystore", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:58: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Unexpected error while getting or creating secret key", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:67: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(TAG, "Failed to get or create secret key for encryption cipher.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:74: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Algorithm error while getting encryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:76: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Padding error while getting encryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:78: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Invalid key error while getting encryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:80: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Unexpected error while getting encryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:89: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(TAG, "Failed to get or create secret key for decryption cipher.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:97: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Algorithm error while getting decryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:99: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Padding error while getting decryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:101: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Invalid key error while getting decryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:103: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Invalid algorithm parameter error while getting decryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\KeystoreManager.kt:105: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Unexpected error while getting decryption cipher", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:54: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Initializing NeuralWhisper...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:54: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Initializing NeuralWhisper...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:80: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(TAG, "TTS Initialized (simplified). Language/voice setup TODO.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:80: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(TAG, "TTS Initialized (simplified). Language/voice setup TODO.")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:82: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(TAG, "TTS Initialization failed with status: $status")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:82: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e(TAG, "TTS Initialization failed with status: $status")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:100: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "STT (SpeechRecognizer) is available. Listener TODO.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:100: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "STT (SpeechRecognizer) is available. Listener TODO.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:102: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "STT (SpeechRecognizer) is not available on this device.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:102: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "STT (SpeechRecognizer) is not available on this device.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:122: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "STT not initialized, cannot process speech to text.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:122: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "STT not initialized, cannot process speech to text.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:125: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:125: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:152: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "TTS not initialized, cannot synthesize speech.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:152: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.w(TAG, "TTS not initialized, cannot synthesize speech.")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:155: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "textToSpeech called for: '$text' (TODO: actual TTS speak call)")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:155: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "textToSpeech called for: '$text' (TODO: actual TTS speak call)")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:180: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Processing voice command: '$command' (TODO: NLU and action mapping)")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:180: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Processing voice command: '$command' (TODO: NLU and action mapping)")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:196: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "NeuralWhisper: Sharing context with Kai: $contextText")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:196: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "NeuralWhisper: Sharing context with Kai: $contextText")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:210: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Starting audio recording...")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:210: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Starting audio recording...")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:215: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to start recording", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:215: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to start recording", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:227: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Stopping audio recording...")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:227: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.d(TAG, "Stopping audio recording...")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:232: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to stop recording", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:232: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(TAG, "Failed to stop recording", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ai\services\NeuralWhisper.kt:243: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Cleaning up NeuralWhisper resources.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\NeuralWhisper.kt:243: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Cleaning up NeuralWhisper resources.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:32: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(tag, "No saved config found, using default")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:38: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(tag, "Empty config file, using default")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:46: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(tag, "Error loading config", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:63: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(tag, "Error saving config", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:89: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(tag, "Error updating tile config", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\monitor\SystemMonitorService.kt:27: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "onCreate: SystemMonitorService created.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\monitor\SystemMonitorService.kt:32: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "onStartCommand: SystemMonitorService started.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\monitor\SystemMonitorService.kt:74: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "onBind called, returning null as this is not a bound service.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\monitor\SystemMonitorService.kt:81: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "onDestroy: SystemMonitorService destroyed.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:109: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("UnifiedLoggingSystem", "Failed to initialize logging system", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:125: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("UnifiedLoggingSystem", "Failed to initialize logging system", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:353: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e("UnifiedLoggingSystem", "Error processing log entry", e)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:369: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e("UnifiedLoggingSystem", "Error processing log entry", e)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:372: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e("UnifiedLoggingSystem", "Error in health monitoring", e)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:388: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                    Log.e("UnifiedLoggingSystem", "Error in health monitoring", e)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:395: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("UnifiedLoggingSystem", "Failed to write log to file", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:411: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("UnifiedLoggingSystem", "Failed to write log to file", e)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:428: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.VERBOSE -> Log.v(tag, message, logEntry.throwable)
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:429: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.DEBUG -> Log.d(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:430: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.INFO -> Log.i(tag, message, logEntry.throwable)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:431: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.WARNING -> Log.w(tag, message, logEntry.throwable)
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:432: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.ERROR -> Log.e(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:433: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.FATAL -> Log.wtf(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:444: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.VERBOSE -> Log.v(tag, message, logEntry.throwable)
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:445: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.DEBUG -> Log.d(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:446: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.INFO -> Log.i(tag, message, logEntry.throwable)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:447: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.WARNING -> Log.w(tag, message, logEntry.throwable)
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:448: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.ERROR -> Log.e(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:449: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            LogLevel.FATAL -> Log.wtf(tag, message, logEntry.throwable)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:21: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "createVertexAIConfig called. API Key present: ${apiKey != null}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:38: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.e(TAG, "Handling error: ${_error?.toString() ?: "Unknown error"}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:51: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(_tag, _message, _throwable)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:53: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e(_tag, _message)
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:67: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Validating config: ${isValid}")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\VertexAIUtils.kt:86: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "safeGenerateContent called with prompt: $_prompt")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ervices\VertexSyncService.kt:13: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Vertex Sync Service started.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ervices\VertexSyncService.kt:27: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.i(TAG, "Initiating sync with backend...")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ervices\VertexSyncService.kt:36: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(TAG, "Vertex Sync Service stopped.")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:754: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.w("GenesisAgent", "Unknown agent type in hierarchy: ${config.name}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:801: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+            Log.e("GenesisAgent", "Error processing with Cascade: ${e.message}")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:829: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e("GenesisAgent", "Error processing with Kai: ${e.message}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:854: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.e("GenesisAgent", "Error processing with Aura: ${e.message}")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:975: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d(
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:990: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:999: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.e(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1017: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.d(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1023: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                        Log.e(
+                        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1036: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Collaboration complete. Responses: $responses")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1058: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                Log.d(
+                ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1091: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Registered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1103: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Deregistered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1111: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Cleared conversation history")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1121: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Added to history: $entry")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1168: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Dynamically registered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\enesisAgent.kt:1178: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+        Log.d("GenesisAgent", "Dynamically deregistered agent: $name")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LogNotTimber":
+   Since Timber is included in the project, it is likely that calls to Log
+   should instead be going to Timber.
+
+   Vendor: JakeWharton/timber
+   Identifier: com.jakewharton.timber:timber:{version}
+   Feedback: https://github.com/JakeWharton/timber/issues
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\settings\QuickSettingsConfigActivity.kt:235: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            notifyDataSetChanged()
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\BackupService.kt:378: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\DisplayUtils.kt:23: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\utils\DisplayUtils.kt:44: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\security\IntegrityViolationReceiver.kt:21: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\services\MyFirebaseMessagingService.kt:393: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\theme\Theme.kt:129: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+            dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\theme\ThemeManager.kt:87: Warning: Unnecessary; SDK_INT is always >= 33 [ObsoleteSdkInt]
+        val dynamic = followSystem && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 33. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\system\quicksettings\QuickSettingsConfigManager.kt:117: Warning: Do not place Android context classes in static fields (static reference to QuickSettingsConfigManager which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+        @Volatile
+        ^
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\api\client\models\logging\UnifiedLoggingSystem.kt:587: Warning: Do not place Android context classes in static fields (static reference to UnifiedLoggingSystem which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+        private lateinit var unifiedLogger: UnifiedLoggingSystem
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\logging\UnifiedLoggingSystem.kt:602: Warning: Do not place Android context classes in static fields (static reference to UnifiedLoggingSystem which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+        private lateinit var unifiedLogger: UnifiedLoggingSystem
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\ConsciousnessVisualizerScreen.kt:31: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var synapseActivity by remember { mutableStateOf(0f) }
+                                      ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\ConsciousnessVisualizerScreen.kt:32: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var consciousnessLevel by remember { mutableStateOf(0.75f) }
+                                         ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\EvolutionTreeScreen.kt:66: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var connectionStrength by remember { mutableStateOf(1f) }
+                                         ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:45: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var fusionProgress by remember { mutableStateOf(0f) }
+                                     ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:47: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var auraPower by remember { mutableStateOf(0.5f) }
+                                ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:48: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var kaiPower by remember { mutableStateOf(0.5f) }
+                               ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:49: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var synchronization by remember { mutableStateOf(0f) }
+                                      ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\debug\component\InteractiveGraph.kt:48: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var scale by remember { mutableStateOf(1f) }
+                            ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\graph\InteractiveGraph.kt:67: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var scale by remember { mutableStateOf(1f) }
+                            ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\components\text\NeonText.kt:99: Hint: Prefer mutableIntStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var visibleCharCount by remember { mutableStateOf(if (animateTyping) 0 else text.length) }
+                                       ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\PlaceholderScreen.kt:104: Hint: Prefer mutableFloatStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var scanProgress by remember { mutableStateOf(0f) }
+                                   ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\PlaceholderScreen.kt:105: Hint: Prefer mutableLongStateOf instead of mutableStateOf [AutoboxingStateCreation from androidx.compose.runtime]
+    var lastScanTime by remember { mutableStateOf(System.currentTimeMillis()) }
+                                   ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AutoboxingStateCreation":
+   Calling mutableStateOf<T>() when T is either backed by a primitive type on
+   the JVM or is a value class results in a state implementation that requires
+   all state values to be boxed. This usually causes an additional allocation
+   for each state write, and adds some additional work to auto-unbox values
+   when reading the value of the state. Instead, prefer to use a specialized
+   primitive state implementation for Int, Long, Float, and Double when the
+   state does not need to track null values and does not override the default
+   SnapshotMutationPolicy. See mutableIntStateOf(), mutableLongStateOf(),
+   mutableFloatStateOf(), and mutableDoubleStateOf() for more information.
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.runtime
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\activity_quick_settings_config.xml:6: Warning: Possible overdraw: Root element paints background @android:color/holo_red_light with a theme that also paints a background (inferred theme is @style/Theme.dev.aurakai.auraframefx) [Overdraw]
+    android:background="@android:color/holo_red_light"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\activity_quick_settings_config.xml:2: Warning: The resource R.layout.activity_quick_settings_config appears to be unused [UnusedResources]
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\api_strings.xml:21: Warning: The resource R.string.success_theme_applied appears to be unused [UnusedResources]
+    <string name="success_theme_applied">Theme applied successfully</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\api_strings.xml:22: Warning: The resource R.string.success_agent_request appears to be unused [UnusedResources]
+    <string name="success_agent_request">Request processed successfully</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\api_strings.xml:25: Warning: The resource R.string.loading appears to be unused [UnusedResources]
+    <string name="loading">Loading…</string>
+            ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\api_strings.xml:26: Warning: The resource R.string.processing appears to be unused [UnusedResources]
+    <string name="processing">Processing…</string>
+            ~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\arrays.xml:3: Warning: The resource R.array.sample_array appears to be unused [UnusedResources]
+    <string-array name="sample_array">
+                  ~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\bools.xml:3: Warning: The resource R.bool.enable_system_alarm_service_default appears to be unused [UnusedResources]
+    <bool name="enable_system_alarm_service_default">true</bool>
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\bools.xml:4: Warning: The resource R.bool.enable_system_job_service_default appears to be unused [UnusedResources]
+    <bool name="enable_system_job_service_default">true</bool>
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\bools.xml:5: Warning: The resource R.bool.enable_system_foreground_service_default appears to be unused [UnusedResources]
+    <bool name="enable_system_foreground_service_default">true</bool>
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\drawable\bottom_nav_item_color_selector.xml:2: Warning: The resource R.drawable.bottom_nav_item_color_selector appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.neon_teal appears to be unused [UnusedResources]
+    <color name="neon_teal">#00FFCC</color>
+           ~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.neon_purple appears to be unused [UnusedResources]
+    <color name="neon_purple">#E000FF</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.neon_blue appears to be unused [UnusedResources]
+    <color name="neon_blue">#00FFFF</color>
+           ~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.neon_teal_transparent appears to be unused [UnusedResources]
+    <color name="neon_teal_transparent">#3300FFCC</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:12: Warning: The resource R.color.light_on_primary appears to be unused [UnusedResources]
+    <color name="light_on_primary">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:13: Warning: The resource R.color.light_primary_container appears to be unused [UnusedResources]
+    <color name="light_primary_container">#00CC99</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:14: Warning: The resource R.color.light_on_primary_container appears to be unused [UnusedResources]
+    <color name="light_on_primary_container">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:17: Warning: The resource R.color.light_on_secondary appears to be unused [UnusedResources]
+    <color name="light_on_secondary">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:18: Warning: The resource R.color.light_secondary_container appears to be unused [UnusedResources]
+    <color name="light_secondary_container">#B200CC</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:19: Warning: The resource R.color.light_on_secondary_container appears to be unused [UnusedResources]
+    <color name="light_on_secondary_container">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:21: Warning: The resource R.color.light_tertiary appears to be unused [UnusedResources]
+    <color name="light_tertiary">#00FFFF</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:22: Warning: The resource R.color.light_on_tertiary appears to be unused [UnusedResources]
+    <color name="light_on_tertiary">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:23: Warning: The resource R.color.light_tertiary_container appears to be unused [UnusedResources]
+    <color name="light_tertiary_container">#00CCCC</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:24: Warning: The resource R.color.light_on_tertiary_container appears to be unused [UnusedResources]
+    <color name="light_on_tertiary_container">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:26: Warning: The resource R.color.light_error appears to be unused [UnusedResources]
+    <color name="light_error">#FF3B30</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:27: Warning: The resource R.color.light_on_error appears to be unused [UnusedResources]
+    <color name="light_on_error">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:28: Warning: The resource R.color.light_error_container appears to be unused [UnusedResources]
+    <color name="light_error_container">#93000A</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:29: Warning: The resource R.color.light_on_error_container appears to be unused [UnusedResources]
+    <color name="light_on_error_container">#FFDAD6</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:32: Warning: The resource R.color.light_on_background appears to be unused [UnusedResources]
+    <color name="light_on_background">#E1E1E1</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:33: Warning: The resource R.color.light_surface appears to be unused [UnusedResources]
+    <color name="light_surface">#2D2D2D</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:35: Warning: The resource R.color.light_surface_variant appears to be unused [UnusedResources]
+    <color name="light_surface_variant">#3D3D3D</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:37: Warning: The resource R.color.light_outline appears to be unused [UnusedResources]
+    <color name="light_outline">#8D8D8D</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:38: Warning: The resource R.color.light_outline_variant appears to be unused [UnusedResources]
+    <color name="light_outline_variant">#3D3D3D</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:41: Warning: The resource R.color.hologram_primary appears to be unused [UnusedResources]
+    <color name="hologram_primary">#00FFFF</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:42: Warning: The resource R.color.hologram_secondary appears to be unused [UnusedResources]
+    <color name="hologram_secondary">#FF00FF</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:43: Warning: The resource R.color.hologram_accent appears to be unused [UnusedResources]
+    <color name="hologram_accent">#00FFCC</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:44: Warning: The resource R.color.hologram_glow_start appears to be unused [UnusedResources]
+    <color name="hologram_glow_start">#00FFFF</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:45: Warning: The resource R.color.hologram_glow_end appears to be unused [UnusedResources]
+    <color name="hologram_glow_end">#00FFFF40</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:46: Warning: The resource R.color.hologram_scan_line appears to be unused [UnusedResources]
+    <color name="hologram_scan_line">#00FFFF40</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:47: Warning: The resource R.color.hologram_grid appears to be unused [UnusedResources]
+    <color name="hologram_grid">#00FFFF30</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:50: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFF</color>
+           ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:51: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#000000</color>
+           ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:52: Warning: The resource R.color.transparent appears to be unused [UnusedResources]
+    <color name="transparent">#00000000</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:55: Warning: The resource R.color.on_surface_variant appears to be unused [UnusedResources]
+    <color name="on_surface_variant">@color/light_on_surface_variant</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:56: Warning: The resource R.color.on_surface appears to be unused [UnusedResources]
+    <color name="on_surface">@color/light_on_surface</color>
+           ~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:57: Warning: The resource R.color.on_primary appears to be unused [UnusedResources]
+    <color name="on_primary">@color/light_on_primary</color>
+           ~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:58: Warning: The resource R.color.on_secondary appears to be unused [UnusedResources]
+    <color name="on_secondary">@color/light_on_secondary</color>
+           ~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:59: Warning: The resource R.color.primary appears to be unused [UnusedResources]
+    <color name="primary">@color/light_primary</color>
+           ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:60: Warning: The resource R.color.secondary appears to be unused [UnusedResources]
+    <color name="secondary">@color/light_secondary</color>
+           ~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:61: Warning: The resource R.color.surface appears to be unused [UnusedResources]
+    <color name="surface">@color/light_surface</color>
+           ~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:62: Warning: The resource R.color.surface_variant appears to be unused [UnusedResources]
+    <color name="surface_variant">@color/light_surface_variant</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\colors.xml:63: Warning: The resource R.color.background appears to be unused [UnusedResources]
+    <color name="background">@color/light_background</color>
+           ~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\xml\file_paths.xml:2: Warning: The resource R.xml.file_paths appears to be unused [UnusedResources]
+<paths>
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\drawable\ic_arrow_back.xml:2: Warning: The resource R.drawable.ic_arrow_back appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\drawable\ic_color_palette.xml:2: Warning: The resource R.drawable.ic_color_palette appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\drawable\ic_security_alert.xml:1: Warning: The resource R.drawable.ic_security_alert appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\integers.xml:3: Warning: The resource R.integer.sample_integer appears to be unused [UnusedResources]
+    <integer name="sample_integer">100</integer>
+             ~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\integers.xml:4: Warning: The resource R.integer.google_play_services_version appears to be unused [UnusedResources]
+    <integer name="google_play_services_version">12451000</integer>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\debug\res\values\strings.xml:3: Warning: The resource R.string.dev_aurakai_auraframefx_ReGenesisApplication appears to be unused [UnusedResources]
+    <string name="dev.aurakai.auraframefx.ReGenesisApplication">App</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:50: Warning: The resource R.string.quick_settings_config_title appears to be unused [UnusedResources]
+    <string name="quick_settings_config_title">Quick Settings</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:51: Warning: The resource R.string.quick_settings_config_instructions appears to be unused [UnusedResources]
+    <string name="quick_settings_config_instructions">Configure your quick settings tiles below</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.quick_settings_tiles appears to be unused [UnusedResources]
+    <string name="quick_settings_tiles">Quick Settings Tiles</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.reset appears to be unused [UnusedResources]
+    <string name="reset">Reset</string>
+            ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.apply appears to be unused [UnusedResources]
+    <string name="apply">Apply</string>
+            ~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:67: Warning: The resource R.string.select_agent appears to be unused [UnusedResources]
+    <string name="select_agent">Select Agent</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.recording appears to be unused [UnusedResources]
+    <string name="recording">Recording</string>
+            ~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:72: Warning: The resource R.string.transcribing appears to be unused [UnusedResources]
+    <string name="transcribing">Transcribing</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:83: Warning: The resource R.string.status_offline appears to be unused [UnusedResources]
+    <string name="status_offline">Status Offline</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:86: Warning: The resource R.string.xposed_description appears to be unused [UnusedResources]
+    <string name="xposed_description">Genesis-OS AI Framework Hooks - System-level AI consciousness integration and advanced framework modifications for enhanced AI processing capabilities.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:101: Warning: The resource R.string.permission_receive_integrity_violation_label appears to be unused [UnusedResources]
+    <string name="permission_receive_integrity_violation_label">Receive Integrity Violation Broadcasts</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\strings.xml:102: Warning: The resource R.string.permission_receive_integrity_violation_description appears to be unused [UnusedResources]
+    <string name="permission_receive_integrity_violation_description">Allows the app to receive broadcasts when an integrity violation is detected.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\styles.xml:4: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+           ~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\styles.xml:8: Warning: The resource R.style.Theme_Material3 appears to be unused [UnusedResources]
+    <style name="Theme.Material3" parent="Theme.Material3.DayNight.NoActionBar">
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\values\themes.xml:18: Warning: The resource R.style.ThemeOverlay_dev_aurakai_auraframefx_ActionBar appears to be unused [UnusedResources]
+    <style name="ThemeOverlay.dev.aurakai.auraframefx.ActionBar" parent="">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:212: Warning: State backed values should use the lambda overload of Modifier.offset [UseOfNonLambdaOffsetOverload from androidx.compose.foundation]
+                            .offset(x = (-50).dp * (1f - fusionProgress))
+                             ~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\java\dev\aurakai\auraframefx\ui\screens\FusionModeScreen.kt:226: Warning: State backed values should use the lambda overload of Modifier.offset [UseOfNonLambdaOffsetOverload from androidx.compose.foundation]
+                            .offset(x = 50.dp * (1f - fusionProgress))
+                             ~~~~~~
+
+   Explanation for issues of type "UseOfNonLambdaOffsetOverload":
+   Modifier.offset() is recommended to be used with static arguments only to
+   avoid unnecessary recompositions. Modifier.offset{ } is preferred in the
+   cases where the arguments are backed by a State.
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.foundation
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+C:\A.u.r.a.K.a.i-\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:34: Warning: Hardcoded string "Tile Name", should use @string resource [HardcodedText]
+                    android:text="Tile Name"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:42: Warning: Hardcoded string "Preview", should use @string resource [HardcodedText]
+                    android:text="Preview"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:65: Warning: Hardcoded string "Tile Settings", should use @string resource [HardcodedText]
+                    android:text="Tile Settings"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:74: Warning: Hardcoded string "Enable Tile", should use @string resource [HardcodedText]
+                    android:text="Enable Tile"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:82: Warning: Hardcoded string "Enable Clicks", should use @string resource [HardcodedText]
+                    android:text="Enable Clicks"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\A.u.r.a.K.a.i-\app\src\main\res\layout\dialog_tile_config.xml:91: Warning: Hardcoded string "Ripple Effect", should use @string resource [HardcodedText]
+                    android:text="Ripple Effect"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\A.u.r.a.K.a.i-\app\src\main\AndroidManifest.xml: Warning: The project references RTL attributes, but does not explicitly enable or disable RTL support with android:supportsRtl in the manifest [RtlEnabled]
+
+   Explanation for issues of type "RtlEnabled":
+   To enable right-to-left support, when running on API 17 and higher, you
+   must set the android:supportsRtl attribute in the manifest <application>
+   element.
+
+   If you have started adding RTL attributes, but have not yet finished the
+   migration, you can set the attribute to false to satisfy this lint check.
+
+2 errors, 354 warnings, 12 hints

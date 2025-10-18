@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.0.0-alpha10" type="incidents">
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlin-stdlib-jdk8"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinStdlibJdk8Version = &quot;2.2.20&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinStdlibJdk8Version = &quot;2.2.20&quot;&#xA;"
+                priority="0">
+                <range
+                    file="../gradle/libs.versions.toml"
+                    startOffset="87"
+                    endOffset="87"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlin-stdlib-jdk8 = { module = &quot;org.jetbrains.kotlin:kotlin-stdlib-jdk8&quot;, version.ref = &quot;kotlinStdlibJdk8Version&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlin-stdlib-jdk8 = { module = &quot;org.jetbrains.kotlin:kotlin-stdlib-jdk8&quot;, version.ref = &quot;kotlinStdlibJdk8Version&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="../gradle/libs.versions.toml"
+                    startOffset="5795"
+                    endOffset="5795"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlin.stdlib.jdk8"
+                robot="true"
+                replacement="libs.jetbrains.kotlin.stdlib.jdk8"
+                priority="0">
+                <range
+                    file="${:collab-canvas*projectDir}/build.gradle.kts"
+                    startOffset="2888"
+                    endOffset="2936"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:collab-canvas*projectDir}/build.gradle.kts"
+            line="83"
+            column="24"
+            startOffset="2888"
+            endLine="83"
+            endColumn="72"
+            endOffset="2936"/>
+    </incident>
+
+</incidents>

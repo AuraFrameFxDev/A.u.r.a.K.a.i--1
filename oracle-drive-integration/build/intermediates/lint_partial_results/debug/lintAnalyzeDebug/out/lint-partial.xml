@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.0.0-alpha10" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.string.oracle_drive_integration_debug_name"
+            file="${:oracle-drive-integration*debug*MAIN*sourceProvider*0*resDir*1}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="65"
+            endLine="3"
+            endColumn="55"
+            endOffset="107"/>
+        <location id="R.string.oracle_drive_integration_main_name"
+            file="${:oracle-drive-integration*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="65"
+            endLine="3"
+            endColumn="54"
+            endOffset="106"/>
+        <entry
+            name="model"
+            string="string[oracle_drive_integration_main_name(D),oracle_drive_integration_debug_name(D)];;;;"/>
+    </map>
+
+</incidents>

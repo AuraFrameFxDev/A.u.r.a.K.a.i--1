@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='US-ASCII'?>
+<metadata>
+      <groupId>org.jetbrains.dokka</groupId>
+      <artifactId>org.jetbrains.dokka.gradle.plugin</artifactId>
+      <version>2.1.0</version>
+      <versioning>
+        <latest>2.1.0</latest>
+        <release>2.1.0</release>
+        <versions>
+          <version>0.10.0</version><version>0.10.1</version><version>0.11.0-dev-59</version><version>0.9.11</version><version>0.9.12</version><version>0.9.12-dev-1</version><version>0.9.13</version><version>0.9.14-eap-1</version><version>0.9.14-eap-2</version><version>0.9.15</version><version>0.9.15-eap-1</version><version>0.9.15-gradle-test-0</version><version>0.9.16</version><version>0.9.17</version><version>0.9.18</version><version>0.9.9</version><version>0.9.9.1</version><version>1.4.30</version><version>1.4.32</version><version>1.5.0</version><version>1.5.30</version><version>1.5.31</version><version>1.6.0</version><version>1.6.10</version><version>1.6.20</version><version>1.6.21</version><version>1.7.0</version><version>1.7.10</version><version>1.7.20</version><version>1.8.10</version><version>1.8.20</version><version>1.9.0</version><version>1.9.10</version><version>1.9.20</version><version>2.0.0</version><version>2.0.0-Beta</version><version>2.1.0</version><version>2.1.0-Beta</version>
+        </versions>
+        <lastUpdated>20251015110549</lastUpdated>
+      </versioning>
+    </metadata>

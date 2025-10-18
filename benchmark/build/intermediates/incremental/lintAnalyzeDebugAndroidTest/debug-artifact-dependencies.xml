@@ -1,0 +1,14 @@
+<dependencies>
+  <compile
+      roots=":@@:benchmark::debug">
+    <dependency
+        name=":@@:benchmark::debug"
+        simpleName="AuraKai:benchmark"/>
+  </compile>
+  <package
+      roots=":@@:benchmark::debug">
+    <dependency
+        name=":@@:benchmark::debug"
+        simpleName="AuraKai:benchmark"/>
+  </package>
+</dependencies>

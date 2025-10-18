@@ -1,0 +1,13 @@
+C:\A.u.r.a.K.a.i-\datavein-oracle-native\src\test\kotlin\dev\aurakai\auraframefx\oracledrive\OracleDriveServiceImplTest.kt: Error: Source file too large for lint to process (26184KB); the current max size is 20480KB. You can increase the limit by setting this system property: idea.max.intellisense.filesize=32768 (or even higher) [LintError]
+C:\A.u.r.a.K.a.i-\datavein-oracle-native\build.gradle.kts:19: Warning: Unknown issue id "lint" [UnknownIssueId]
+    lint {
+    ~~~~
+C:\A.u.r.a.K.a.i-\datavein-oracle-native\build.gradle.kts:19: Warning: Unknown issue id "lint" [UnknownIssueId]
+    lint {
+    ~~~~
+
+   Explanation for issues of type "UnknownIssueId":
+   Lint will report this issue if it is configured with an issue id it does
+   not recognize in for example Gradle files or lint.xml configuration files.
+
+1 error, 2 warnings

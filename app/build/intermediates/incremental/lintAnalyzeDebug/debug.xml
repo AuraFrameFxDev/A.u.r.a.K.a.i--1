@@ -1,0 +1,31 @@
+<variant
+    name="debug"
+    package="dev.aurakai.auraframefx"
+    minSdkVersion="33"
+    targetSdkVersion="CANARY"
+    debuggable="true"
+    mergedManifest="build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-9.0.0-alpha10"
+    partialResultsDir="build\intermediates\lint_partial_results\debug\lintAnalyzeDebug\out"
+    desugaredMethodsFiles="C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\fb3b954e6d058c0848fa974ded637ad8\workspace\transformed\desugar_jdk_libs_configuration-2.1.5-desugar-lint.txt;C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\13be74fa9db83e5e2c4d1967aef76675\workspace\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      coreLibraryDesugaring="true"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\debug\java;src\main\kotlin;src\debug\kotlin"
+        resDirectories="src\main\res;src\debug\res"
+        assetsDirectories="src\main\assets;src\debug\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="build\intermediates\javac\debug\compileDebugJavaWithJavac\classes;build\intermediates\compile_r_class_jar\debug\generateDebugRFile\R.jar"
+      type="MAIN"
+      applicationId="dev.aurakai.auraframefx.debug"
+      generatedSourceFolders="build\generated\ap_generated_sources\debug\out;build\generated\aidl_source_output_dir\debug\out"
+      desugaredMethodsFiles="C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\fb3b954e6d058c0848fa974ded637ad8\workspace\transformed\desugar_jdk_libs_configuration-2.1.5-desugar-lint.txt;C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\13be74fa9db83e5e2c4d1967aef76675\workspace\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

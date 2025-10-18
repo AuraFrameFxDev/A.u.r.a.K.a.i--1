@@ -1,0 +1,15 @@
+<libraries>
+  <library
+      name=":@@:benchmark::debug"
+      jars="C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\db0e3a0f9f82bab592f14fb765c4e6ae\workspace\transformed\out\jars\classes.jar;C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\db0e3a0f9f82bab592f14fb765c4e6ae\workspace\transformed\out\jars\libs\R.jar"
+      resolved="AuraKai:benchmark:unspecified"
+      folder="C:\Users\Wehtt\.gradle\caches\9.2.0-milestone-1\transforms\db0e3a0f9f82bab592f14fb765c4e6ae\workspace\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+</libraries>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.0.0-alpha10" type="partial_results">
+    <map id="NotificationPermission">
+        <location id="class"
+            file="$GRADLE_USER_HOME/caches/9.2.0-milestone-1/transforms/05311cc5f9df58892f2624f1ffdd2c99/workspace/transformed/jetified-leakcanary-android-core-2.14/jars/classes.jar"/>
+        <entry
+            name="className"
+            string="leakcanary/NotificationEventListener"/>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.string.rom_service_description"
+            file="${:romtools*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="122"
+            endLine="4"
+            endColumn="43"
+            endOffset="152"/>
+        <location id="R.string.romtools_debug_name"
+            file="${:romtools*debug*MAIN*sourceProvider*0*resDir*1}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="65"
+            endLine="3"
+            endColumn="39"
+            endOffset="91"/>
+        <location id="R.string.romtools_main_name"
+            file="${:romtools*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="65"
+            endLine="3"
+            endColumn="38"
+            endOffset="90"/>
+        <entry
+            name="model"
+            string="string[romtools_main_name(D),rom_service_description(D),romtools_debug_name(D)];;;;"/>
+    </map>
+
+</incidents>

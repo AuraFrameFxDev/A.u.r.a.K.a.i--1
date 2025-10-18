@@ -1,0 +1,14 @@
+C:\A.u.r.a.K.a.i-\romtools\src\main\kotlin\dev\aurakai\auraframefx\romtools\ui\RomToolsScreen.kt:241: Warning: Do not hardcode "/sdcard/"; use Environment.getExternalStorageDirectory().getPath() instead [SdCardPath]
+                path = "/sdcard/backups",
+                        ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SdCardPath":
+   Your code should not reference the /sdcard path directly; instead use
+   Environment.getExternalStorageDirectory().getPath().
+
+   Similarly, do not reference the /data/data/ path directly; it can vary in
+   multi-user scenarios. Instead, use Context.getFilesDir().getPath().
+
+   https://developer.android.com/training/data-storage#filesExternal
+
+0 errors, 1 warning

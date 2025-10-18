@@ -1,0 +1,11 @@
+C:\A.u.r.a.K.a.i-\oracle-drive-integration\build.gradle.kts:29: Warning: Use version catalog instead [UseTomlInstead]
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.20")
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseTomlInstead":
+   If your project is using a libs.versions.toml file, you should place all
+   Gradle dependencies in the TOML file. This lint check looks for version
+   declarations outside of the TOML file and suggests moving them (and in the
+   IDE, provides a quickfix to performing the operation automatically).
+
+0 errors, 1 warning
