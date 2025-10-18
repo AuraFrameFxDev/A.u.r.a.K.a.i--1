@@ -1,0 +1,3 @@
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/.cxx/Debug/2w5s1c4q/x86_64/CMakeFiles/datavein_oracle_native.dir
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/.cxx/Debug/2w5s1c4q/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/.cxx/Debug/2w5s1c4q/x86_64/CMakeFiles/rebuild_cache.dir

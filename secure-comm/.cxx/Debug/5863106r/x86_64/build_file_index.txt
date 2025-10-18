@@ -1,0 +1,1 @@
+C:\Users\Wehtt\AndroidStudioProjects\AuraKai_ReIntelligence\secure-comm\src\main\cpp\CMakeLists.txt

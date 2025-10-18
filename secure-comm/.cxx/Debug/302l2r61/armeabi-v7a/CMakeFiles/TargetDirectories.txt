@@ -1,0 +1,3 @@
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/.cxx/Debug/302l2r61/armeabi-v7a/CMakeFiles/secure_comm_native.dir
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/.cxx/Debug/302l2r61/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/secure-comm/.cxx/Debug/302l2r61/armeabi-v7a/CMakeFiles/rebuild_cache.dir

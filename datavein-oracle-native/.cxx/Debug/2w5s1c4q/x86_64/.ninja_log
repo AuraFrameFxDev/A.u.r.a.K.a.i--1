@@ -1,0 +1,5 @@
+# ninja log v5
+1	3712	7824463851258685	CMakeFiles/datavein_oracle_native.dir/oracle_drive_jni.cpp.o	8385874970393600
+3752	6381	7824463879962484	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/x86_64/libdatavein_oracle_native.so	289a63051b8d4a0d
+68	535	7824621534949570	C:/Users/Wehtt/AndroidStudioProjects/AuraKai_ReIntelligence/datavein-oracle-native/build/intermediates/cxx/Debug/2w5s1c4q/obj/x86_64/libdatavein_oracle_native.so	289a63051b8d4a0d
+1	13	0	clean	bfff2010d6239e2d

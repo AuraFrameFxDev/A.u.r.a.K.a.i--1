@@ -1,0 +1,1 @@
+C:\Users\Wehtt\AndroidStudioProjects\AuraKai_ReIntelligence\datavein-oracle-native\src\main\cpp\CMakeLists.txt
